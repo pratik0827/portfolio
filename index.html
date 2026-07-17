@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratik Patil | Developer OS</title>
+    <meta name="description" content="Interactive Developer Portfolio of Pratik Patil">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Boot Sequence Overlay -->
+    <div id="boot-screen">
+        <div id="boot-text"></div>
+    </div>
+
+    <!-- Desktop Environment -->
+    <div class="desktop">
+        <!-- Animated Background Mesh -->
+        <div class="bg-mesh">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+        </div>
+
+        <div class="os-window">
+            <div class="window-header">
+                <div class="window-controls">
+                    <span class="control close"></span>
+                    <span class="control minimize"></span>
+                    <span class="control maximize"></span>
+                </div>
+                <div class="window-title">pratik-patil@portfolio:~</div>
+            </div>
+            
+            <div class="window-body">
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="sidebar-section">
+                        <h3 class="sidebar-title"><i class="fas fa-chevron-down"></i> EXPLORER</h3>
+                        <div class="sidebar-content">
+                            <h4 class="folder-title"><i class="fas fa-chevron-down"></i> PORTFOLIO</h4>
+                            <ul class="file-tree">
+                                <li class="file" data-file="readme.md"><i class="fab fa-markdown file-icon md-icon"></i> readme.md</li>
+                                <li class="file" data-file="about.txt"><i class="fas fa-file-alt file-icon txt-icon"></i> about.txt</li>
+                                <li class="file" data-file="experience.log"><i class="fas fa-history file-icon log-icon"></i> experience.log</li>
+                                <li class="file" data-file="projects.json"><i class="fas fa-code file-icon json-icon"></i> projects.json</li>
+                                <li class="file" data-file="contact.sh"><i class="fas fa-terminal file-icon sh-icon"></i> contact.sh</li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Terminal Editor -->
+                <main class="terminal-container">
+                    <div class="terminal-tabs">
+                        <div class="tab active"><i class="fas fa-terminal"></i> terminal</div>
+                    </div>
+                    <div class="terminal-content" id="terminal-content">
+                        <div id="terminal-history"></div>
+                        <div class="terminal-input-line">
+                            <span class="prompt">guest@pratik-os:~$</span>
+                            <input type="text" id="command-input" autocomplete="off" spellcheck="false" autofocus placeholder="Type 'help' or 'cat about.txt'...">
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
