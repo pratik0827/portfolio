@@ -58,6 +58,26 @@ Tools:      Git/GitHub, CI/CD
       <span class="format-json-key">"name"</span>: <span class="format-json-string">"Binance Futures Bot"</span>,
       <span class="format-json-key">"stack"</span>: [<span class="format-json-string">"Python"</span>, <span class="format-json-string">"CLI"</span>],
       <span class="format-json-key">"description"</span>: <span class="format-json-string">"CLI trading bot executing MARKET and LIMIT orders."</span>
+    },
+    {
+      <span class="format-json-key">"name"</span>: <span class="format-json-string">"Accredian Clone"</span>,
+      <span class="format-json-key">"stack"</span>: [<span class="format-json-string">"React"</span>, <span class="format-json-string">"Next.js"</span>, <span class="format-json-string">"Tailwind CSS"</span>],
+      <span class="format-json-key">"description"</span>: <span class="format-json-string">"Functional clone of the Accredian Enterprise landing page with a mock API."</span>
+    },
+    {
+      <span class="format-json-key">"name"</span>: <span class="format-json-string">"B2B Marketing Site"</span>,
+      <span class="format-json-key">"stack"</span>: [<span class="format-json-string">"HTML5"</span>, <span class="format-json-string">"Vanilla JS"</span>, <span class="format-json-string">"Web Components"</span>],
+      <span class="format-json-key">"description"</span>: <span class="format-json-string">"Modular marketing site optimized for Core Web Vitals and accessibility."</span>
+    },
+    {
+      <span class="format-json-key">"name"</span>: <span class="format-json-string">"Learn Forge"</span>,
+      <span class="format-json-key">"stack"</span>: [<span class="format-json-string">"HTML5"</span>, <span class="format-json-string">"CSS3"</span>, <span class="format-json-string">"Firebase"</span>],
+      <span class="format-json-key">"description"</span>: <span class="format-json-string">"Interactive project-based learning platform for technical projects."</span>
+    },
+    {
+      <span class="format-json-key">"name"</span>: <span class="format-json-string">"Performance Diagnosis Demo"</span>,
+      <span class="format-json-key">"stack"</span>: [<span class="format-json-string">"HTML5"</span>, <span class="format-json-string">"CSS3"</span>],
+      <span class="format-json-key">"description"</span>: <span class="format-json-string">"Rebuilt, highly optimized hero section demo for performance diagnosis."</span>
     }
   ]
 }
