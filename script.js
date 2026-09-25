@@ -1,103 +1,3 @@
-// ===== FILE SYSTEM (Portfolio Content) =====
-const fileSystem = {
-    'readme.md': `
-<span class="format-h1"># Pratik Patil | Full Stack Developer</span>
-<span class="format-text">Welcome to my interactive portfolio OS.</span>
-<span class="format-text">Type <span class="format-json-string">'help'</span> to see available commands, or click files in the explorer on the left.</span>
-<br>
-<span class="format-h2">## About Me</span>
-<span class="format-text">A Computer Science graduate building scalable backends, intuitive frontends, and intelligent desktop applications. I thrive on turning complex problems into elegant, efficient, and user-centric solutions.</span>
-<br>
-<span class="format-h2">## Quick Links</span>
-<span class="format-text">- GitHub: <a class="format-link" href="https://github.com/pratik0827" target="_blank">github.com/pratik0827</a></span>
-<span class="format-text">- LinkedIn: <a class="format-link" href="https://linkedin.com/in/pratik-patil-a42856409" target="_blank">linkedin.com/in/pratik-patil-a42856409</a></span>
-    `,
-    'about.txt': `
-NAME: Pratik Patil
-ROLE: Full Stack Developer & Innovator
-EDUCATION: B.Sc. Computer Science (GPA: 8.80/10)
-CERTIFICATION: Google Cloud Certified in Generative AI
-
-TECHNICAL ARSENAL:
-------------------
-Languages:  Java, Python, JavaScript (ES6+), Rust, C++, C
-Backend:    Node.js, .NET, Tauri, FastAPI, REST APIs
-Frontend:   React, HTML5, CSS3, Tailwind CSS
-Databases:  SQL, MySQL, TimescaleDB
-Tools:      Git/GitHub, CI/CD
-    `,
-    'experience.log': `
-[2026-06] Python Developer Intern @ Infotact Solutions
-  > Developed and maintained Python scripts integrating 3rd-party REST APIs.
-  > Implemented structured input validation and error handling.
-  > Debugged integration issues & added logging for traceability.
-
-[2026-07] Software Engineering Virtual Experience @ Walmart USA
-  > Designed a simulated backend API to flag defective inventory items.
-  > Applied validation logic and clear output formatting.
-    `,
-    'projects.json': `
-{
-  <span class="format-json-key">"projects"</span>: [
-    {
-      <span class="format-json-key">"name"</span>: <span class="format-json-string">"Luna AI Desktop"</span>,
-      <span class="format-json-key">"stack"</span>: [<span class="format-json-string">"React"</span>, <span class="format-json-string">"Tauri"</span>, <span class="format-json-string">"Rust"</span>],
-      <span class="format-json-key">"description"</span>: <span class="format-json-string">"Privacy-first desktop AI assistant using a secure local Rust database."</span>
-    },
-    {
-      <span class="format-json-key">"name"</span>: <span class="format-json-string">"ChatApp"</span>,
-      <span class="format-json-key">"stack"</span>: [<span class="format-json-string">"React Native"</span>, <span class="format-json-string">"Node.js"</span>, <span class="format-json-string">"Socket.io"</span>],
-      <span class="format-json-key">"description"</span>: <span class="format-json-string">"Real-time chat application with SQLite persistence."</span>
-    },
-    {
-      <span class="format-json-key">"name"</span>: <span class="format-json-string">"Smart Grid API"</span>,
-      <span class="format-json-key">"stack"</span>: [<span class="format-json-string">"Python"</span>, <span class="format-json-string">"FastAPI"</span>, <span class="format-json-string">"TimescaleDB"</span>],
-      <span class="format-json-key">"description"</span>: <span class="format-json-string">"Asynchronous Load Balancing API for high-frequency smart meter telemetry."</span>
-    },
-    {
-      <span class="format-json-key">"name"</span>: <span class="format-json-string">"Binance Futures Bot"</span>,
-      <span class="format-json-key">"stack"</span>: [<span class="format-json-string">"Python"</span>, <span class="format-json-string">"CLI"</span>],
-      <span class="format-json-key">"description"</span>: <span class="format-json-string">"CLI trading bot executing MARKET and LIMIT orders."</span>
-    },
-    {
-      <span class="format-json-key">"name"</span>: <span class="format-json-string">"Accredian Clone"</span>,
-      <span class="format-json-key">"stack"</span>: [<span class="format-json-string">"React"</span>, <span class="format-json-string">"Next.js"</span>, <span class="format-json-string">"Tailwind CSS"</span>],
-      <span class="format-json-key">"description"</span>: <span class="format-json-string">"Functional clone of the Accredian Enterprise landing page with a mock API."</span>
-    },
-    {
-      <span class="format-json-key">"name"</span>: <span class="format-json-string">"B2B Marketing Site"</span>,
-      <span class="format-json-key">"stack"</span>: [<span class="format-json-string">"HTML5"</span>, <span class="format-json-string">"Vanilla JS"</span>, <span class="format-json-string">"Web Components"</span>],
-      <span class="format-json-key">"description"</span>: <span class="format-json-string">"Modular marketing site optimized for Core Web Vitals and accessibility."</span>
-    },
-    {
-      <span class="format-json-key">"name"</span>: <span class="format-json-string">"Learn Forge"</span>,
-      <span class="format-json-key">"stack"</span>: [<span class="format-json-string">"HTML5"</span>, <span class="format-json-string">"CSS3"</span>, <span class="format-json-string">"Firebase"</span>],
-      <span class="format-json-key">"description"</span>: <span class="format-json-string">"Interactive project-based learning platform for technical projects."</span>
-    },
-    {
-      <span class="format-json-key">"name"</span>: <span class="format-json-string">"Performance Diagnosis Demo"</span>,
-      <span class="format-json-key">"stack"</span>: [<span class="format-json-string">"HTML5"</span>, <span class="format-json-string">"CSS3"</span>],
-      <span class="format-json-key">"description"</span>: <span class="format-json-string">"Rebuilt, highly optimized hero section demo for performance diagnosis."</span>
-    }
-  ]
-}
-    `,
-    'contact.sh': `
-#!/bin/bash
-echo "Initiating contact sequence..."
-
-EMAIL="pratikpatil5846w@gmail.com"
-PHONE="+91 8446354717"
-LOCATION="Saphale, Palghar, Maharashtra"
-
-echo "Select preferred method:"
-echo "1) <a class="format-link" href="mailto:pratikpatil5846w@gmail.com">Send Email</a>"
-echo "2) <a class="format-link" href="tel:8446354717">Call Phone</a>"
-
-echo "Status: AWAITING_CONNECTION"
-    `
-};
-
 // ===== DOM ELEMENTS =====
 const bootScreen = document.getElementById('boot-screen');
 const bootText = document.getElementById('boot-text');
@@ -110,6 +10,152 @@ const windowHeader = document.querySelector('.window-header');
 const btnClose = document.querySelector('.close');
 const btnMinimize = document.querySelector('.minimize');
 const btnMaximize = document.querySelector('.maximize');
+
+const modeToggleBtn = document.getElementById('mode-toggle');
+const modernUi = document.getElementById('modern-ui');
+const terminalUi = document.getElementById('terminal-ui');
+const toggleText = document.getElementById('toggle-text');
+const projectsGrid = document.getElementById('projects-grid');
+
+let isGeekMode = false;
+let bootRan = false;
+let fileSystem = {}; // Will be populated dynamically
+
+// Fetch GitHub Repos and Populate Grid & Terminal
+async function fetchAndRenderProjects() {
+    try {
+        const response = await fetch('https://api.github.com/users/pratik0827/repos?sort=updated');
+        const repos = await response.json();
+        
+        // Filter out the portfolio repo if needed, or keep it. Let's just use all non-forks
+        const validRepos = repos.filter(repo => !repo.fork);
+
+        // Add Diet Own project manually
+        validRepos.unshift({
+            name: 'Diet Own',
+            html_url: '#',
+            description: 'A personalized diet tracking and meal planning application tailored specifically for my own fitness journey.',
+            language: 'JavaScript',
+            stargazers_count: 0
+        });
+        
+        projectsGrid.innerHTML = ''; // Clear loading
+        let terminalProjectsJsonStr = `{\n  <span class="format-json-key">"projects"</span>: [\n`;
+        
+        validRepos.forEach((repo, i) => {
+            // Modern UI rendering
+            const pDiv = document.createElement('div');
+            pDiv.className = 'project-item';
+            const lang = repo.language || 'Code';
+            let techIcon = 'fas fa-code';
+            if (lang === 'JavaScript' || lang === 'TypeScript') techIcon = 'fab fa-js';
+            if (lang === 'Python') techIcon = 'fab fa-python';
+            if (lang === 'HTML') techIcon = 'fab fa-html5';
+            if (lang === 'CSS') techIcon = 'fab fa-css3';
+            
+            pDiv.innerHTML = `
+                <h4><a href="` + repo.html_url + `" target="_blank">` + repo.name + `</a> <i class="fab fa-github"></i></h4>
+                <p>` + (repo.description || 'No description provided.') + `</p>
+                <div class='project-tech'>
+                    <span class='tech-tag'><i class="` + techIcon + `"></i> ` + lang + `</span>
+                    ` + (repo.stargazers_count > 0 ? `<span class='tech-tag'><i class="fas fa-star"></i> ` + repo.stargazers_count + `</span>` : '') + `
+                </div>
+            `;
+            projectsGrid.appendChild(pDiv);
+            
+            // Terminal JSON string building
+            terminalProjectsJsonStr += `    {\n      <span class="format-json-key">"name"</span>: <span class="format-json-string">"` + repo.name + `"</span>,\n      <span class="format-json-key">"language"</span>: <span class="format-json-string">"` + lang + `"</span>,\n      <span class="format-json-key">"description"</span>: <span class="format-json-string">"` + (repo.description ? repo.description.replace(/"/g, '\\"') : '') + `"</span>\n    }` + (i < validRepos.length - 1 ? ',' : '') + `\n`;
+        });
+        
+        terminalProjectsJsonStr += `  ]\n}`;
+        initFileSystem(terminalProjectsJsonStr);
+        
+    } catch (e) {
+        projectsGrid.innerHTML = '<p>Error loading projects from GitHub.</p>';
+        initFileSystem('{\n  <span class="format-error">"error": "Failed to fetch from GitHub"</span>\n}');
+    }
+}
+
+function initFileSystem(projectsStr) {
+    fileSystem = {
+        'readme.md': `
+<span class="format-h1"># Pratik Patil | Full Stack Developer</span>
+<span class="format-text">Welcome to my interactive portfolio OS.</span>
+<span class="format-text">Type <span class="format-json-string">'help'</span> to see available commands, or click files in the explorer on the left.</span>
+<br>
+<span class="format-h2">## About Me</span>
+<span class="format-text">A Computer Science graduate building scalable backends, intuitive frontends, and intelligent desktop applications. I thrive on turning complex problems into elegant, efficient, and user-centric solutions.</span>
+<br>
+<span class="format-h2">## Quick Links</span>
+<span class="format-text">- GitHub: <a class="format-link" href="https://github.com/pratik0827" target="_blank">github.com/pratik0827</a></span>
+<span class="format-text">- LinkedIn: <a class="format-link" href="https://linkedin.com/in/pratik-patil-a42856409" target="_blank">linkedin.com/in/pratik-patil-a42856409</a></span>
+        `,
+        'about.txt': `
+NAME: Pratik Patil
+ROLE: Full Stack Developer & Innovator
+EDUCATION: B.Sc. Computer Science (GPA: 8.80/10)
+CERTIFICATION: Google Cloud Certified in Generative AI
+
+TECHNICAL ARSENAL:
+------------------
+Languages:  Java, Python, JavaScript (ES6+), Rust, C++, C
+Backend:    Node.js, .NET, Tauri, FastAPI, REST APIs
+Frontend:   React, HTML5, CSS3, Tailwind CSS
+Databases:  SQL, MySQL, TimescaleDB
+Tools:      Git/GitHub, CI/CD
+        `,
+        'experience.log': `
+[2026-06] Python Developer Intern @ Infotact Solutions
+  > Developed and maintained Python scripts integrating 3rd-party REST APIs.
+  > Implemented structured input validation and error handling.
+  > Debugged integration issues & added logging for traceability.
+
+[2026-07] Software Engineering Virtual Experience @ Walmart USA
+  > Designed a simulated backend API to flag defective inventory items.
+  > Applied validation logic and clear output formatting.
+        `,
+        'projects.json': projectsStr,
+        'contact.sh': `
+#!/bin/bash
+echo "Initiating contact sequence..."
+
+EMAIL="pratikpatil5846w@gmail.com"
+PHONE="+91 8446354717"
+LOCATION="Saphale, Palghar, Maharashtra"
+
+echo "Select preferred method:"
+echo "1) <a class="format-link" href="mailto:pratikpatil5846w@gmail.com">Send Email</a>"
+echo "2) <a class="format-link" href="tel:8446354717">Call Phone</a>"
+
+echo "Status: AWAITING_CONNECTION"
+        `
+    };
+}
+
+fetchAndRenderProjects();
+
+// ===== MODE TOGGLE =====
+modeToggleBtn.addEventListener('click', () => {
+    isGeekMode = !isGeekMode;
+    if (isGeekMode) {
+        modernUi.classList.remove('active-mode');
+        modernUi.classList.add('hidden-mode');
+        terminalUi.classList.remove('hidden-mode');
+        terminalUi.classList.add('active-mode');
+        toggleText.innerText = "Modern UI";
+        if (!bootRan) {
+            bootRan = true;
+            runBootSequence();
+        }
+    } else {
+        terminalUi.classList.remove('active-mode');
+        terminalUi.classList.add('hidden-mode');
+        modernUi.classList.remove('hidden-mode');
+        modernUi.classList.add('active-mode');
+        toggleText.innerText = "Geek Mode";
+    }
+});
+
 
 // ===== AUDIO EFFECTS =====
 const AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -153,7 +199,7 @@ document.addEventListener('mousemove', (e) => {
     if (!isDragging) return;
     windowX = e.clientX - dragOffsetX;
     windowY = e.clientY - dragOffsetY;
-    osWindow.style.transform = `translate(${windowX}px, ${windowY}px)`;
+    osWindow.style.transform = "translate(" + windowX + "px, " + windowY + "px)";
 });
 
 document.addEventListener('mouseup', () => {
@@ -176,7 +222,7 @@ btnMaximize.addEventListener('click', () => {
     if (osWindow.classList.contains('maximized')) {
         osWindow.style.transform = 'translate(0px, 0px)';
     } else {
-        osWindow.style.transform = `translate(${windowX}px, ${windowY}px)`;
+        osWindow.style.transform = "translate(" + windowX + "px, " + windowY + "px)";
     }
 });
 
@@ -193,12 +239,13 @@ const bootLines = [
 ];
 
 async function runBootSequence() {
+    bootScreen.style.display = 'flex';
+    bootScreen.style.opacity = '1';
     for (let i = 0; i < bootLines.length; i++) {
         const line = document.createElement('div');
         line.className = 'boot-line';
         line.innerHTML = bootLines[i];
         bootText.appendChild(line);
-        // Random delay between 50ms and 150ms for faster boot
         await new Promise(r => setTimeout(r, Math.random() * 100 + 50));
     }
     
@@ -272,7 +319,7 @@ function executeCommand(commandStr, echo = true) {
     if (echo) {
         const echoLine = document.createElement('div');
         echoLine.className = 'cmd-echo';
-        echoLine.innerHTML = `<span class="prompt">guest@pratik-os:~$</span>${commandStr}`;
+        echoLine.innerHTML = "<span class='prompt'>guest@pratik-os:~$</span>" + commandStr;
         terminalHistory.appendChild(echoLine);
     }
 
@@ -307,7 +354,7 @@ Available commands:
                     output = fileSystem[fileName];
                     setActiveFile(fileName);
                 } else {
-                    output = `<span class="format-error">cat: ${fileName}: No such file or directory</span>`;
+                    output = "<span class='format-error'>cat: " + fileName + ": No such file or directory</span>";
                 }
             }
             break;
@@ -353,14 +400,14 @@ Available commands:
             if (args.includes('-rf') && args.includes('/')) {
                 output = '<span class="format-error">Nice try! But I am not letting you delete my portfolio. 😅</span>';
             } else {
-                output = `<span class="format-error">rm: cannot remove '${args[1] || ''}': Permission denied</span>`;
+                output = "<span class='format-error'>rm: cannot remove '" + (args[1] || '') + "': Permission denied</span>";
             }
             break;
         case 'sudo':
             output = '<span class="format-error">guest is not in the sudoers file. This incident will be reported to Pratik.</span>';
             break;
         default:
-            output = `<span class="format-error">${cmd}: command not found</span>`;
+            output = "<span class='format-error'>" + cmd + ": command not found</span>";
     }
 
     printOutput(output);
@@ -392,19 +439,16 @@ function setActiveFile(fileName) {
 fileItems.forEach(item => {
     item.addEventListener('click', () => {
         const fileName = item.dataset.file;
-        commandInput.value = `cat ${fileName}`;
-        executeCommand(`cat ${fileName}`, true);
+        commandInput.value = "cat " + fileName;
+        executeCommand("cat " + fileName, true);
         commandInput.focus();
     });
 });
 
 // Ensure clicking anywhere in terminal focuses input
 terminalContent.addEventListener('click', () => {
-    // Only focus if text is not selected
     if (window.getSelection().toString() === '') {
         commandInput.focus();
     }
 });
 
-// Start Boot
-window.onload = runBootSequence;
